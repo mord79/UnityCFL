@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <author>Tobias Pott</author>
+      <authoring_tool>WalhallaInteractive COLLADA exporter</authoring_tool>
+      <comments />
+      <copyright>Tobias Pott 2012</copyright>
+      <source_data />
+    </contributor>
+    <created>2015-01-14T13:58:33.9733232-05:00</created>
+    <keywords />
+    <modified>2015-01-14T13:58:33.9733232-05:00</modified>
+    <revision />
+    <subject />
+    <title />
+    <unit meter="0.01" />
+  </asset>
+  <library_images>
+    <image id="R_ArmTexture-image" name="R_ArmTexture">
+      <init_from>Materials\R_Arm-tex.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="R_ArmMaterial" name="R_ArmMaterial">
+      <instance_effect url="#R_ArmShader-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="R_ArmShader-fx" name="R_ArmShader">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <ambient>
+              <color sid="ambient">1.000000 1.000000 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="R_ArmTexture-image" texcoord="CHANNEL0" />
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="R_Arm-lib" name="R_Arm">
+      <mesh>
+        <source id="R_Arm-POSITION">
+          <float_array id="R_Arm-POSITION-array" count="72">-1.000000 4.500000 -1.000000 1.000000 4.500000 -1.000000 -1.000000 4.500000 1.000000 1.000000 4.500000 1.000000 -1.000000 -4.500000 1.000000 1.000000 -4.500000 1.000000 -1.000000 -4.500000 -1.000000 1.000000 -4.500000 -1.000000 -1.000000 4.500000 -1.000000 -1.000000 4.500000 1.000000 -1.000000 -4.500000 -1.000000 -1.000000 -4.500000 1.000000 1.000000 -4.500000 -1.000000 1.000000 -4.500000 1.000000 1.000000 4.500000 -1.000000 1.000000 4.500000 1.000000 -1.000000 -4.500000 -1.000000 1.000000 -4.500000 -1.000000 -1.000000 4.500000 -1.000000 1.000000 4.500000 -1.000000 -1.000000 4.500000 1.000000 1.000000 4.500000 1.000000 -1.000000 -4.500000 1.000000 1.000000 -4.500000 1.000000</float_array>
+          <technique_common>
+            <accessor count="24" source="R_Arm-POSITION-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="R_Arm-Normal0">
+          <float_array id="R_Arm-Normal0-array" count="72">0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="24" source="R_Arm-Normal0-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="R_Arm-UV0">
+          <float_array id="R_Arm-UV0-array" count="48">0.062500 0.750000 0.187500 0.750000 0.062500 0.875000 0.187500 0.875000 0.312500 0.750000 0.437500 0.750000 0.312500 0.875000 0.437500 0.875000 0.312500 0.062500 0.437500 0.062500 0.312500 0.625000 0.437500 0.625000 0.062500 0.062500 0.187500 0.062500 0.062500 0.625000 0.187500 0.625000 0.812500 0.062500 0.937500 0.062500 0.812500 0.625000 0.937500 0.625000 0.562500 0.062500 0.687500 0.062500 0.562500 0.625000 0.687500 0.625000</float_array>
+          <technique_common>
+            <accessor count="24" source="R_Arm-UV0-array" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="R_Arm-VERTEX_COLOR0">
+          <float_array id="R_Arm-VERTEX_COLOR0-array" count="96">1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="24" source="R_Arm-VERTEX_COLOR0-array" stride="4">
+              <param name="R" type="float" />
+              <param name="G" type="float" />
+              <param name="B" type="float" />
+              <param name="A" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="R_Arm-VERTEX">
+          <input semantic="POSITION" source="#R_Arm-POSITION" />
+        </vertices>
+        <triangles count="12" material="R_ArmMaterial">
+          <input offset="0" semantic="VERTEX" source="#R_Arm-VERTEX" />
+          <input offset="1" semantic="NORMAL" source="#R_Arm-Normal0" />
+          <input offset="2" semantic="TEXCOORD" source="#R_Arm-UV0" />
+          <input offset="3" semantic="COLOR" source="#R_Arm-VERTEX_COLOR0" />
+          <p>0 0 0 0 3 3 3 3 1 1 1 1 0 0 0 0 2 2 2 2 3 3 3 3 4 4 4 4 7 7 7 7 5 5 5 5 4 4 4 4 6 6 6 6 7 7 7 7 8 8 8 8 11 11 11 11 9 9 9 9 8 8 8 8 10 10 10 10 11 11 11 11 12 12 12 12 15 15 15 15 13 13 13 13 12 12 12 12 14 14 14 14 15 15 15 15 16 16 16 16 19 19 19 19 17 17 17 17 16 16 16 16 18 18 18 18 19 19 19 19 20 20 20 20 23 23 23 23 21 21 21 21 20 20 20 20 22 22 22 22 23 23 23 23</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="R_ArmScene" name="R_ArmScene">
+      <node id="R_Arm" name="R_Arm" sid="R_Arm">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_geometry url="#R_Arm-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="R_ArmMaterial" target="#R_ArmMaterial" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#R_ArmScene" sid="" name="" />
+  </scene>
+</COLLADA>
