@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\CollectGold.js" />
+     <Compile Include="Assets\scripts\EndLevel.js" />
      <Compile Include="Assets\scripts\MouvementCC.js" />
      <Compile Include="Assets\scripts\Score.js" />
  <Reference Include="UnityEngine.UI">
