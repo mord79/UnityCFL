@@ -1,22 +1,17 @@
 ﻿#pragma strict
 
-import UnityEngine.UI;
 
-var text : Text;
-text = GameObject.Find("Score").GetComponent(Text);
-
+DontDestroyOnLoad (transform.gameObject);
 var score : int;
 
-function Start () {
+function OnLevelWasLoaded (level : int) {
 
-	text.text = "Score: " + score;
-
-
+	Debug.Log("level loaded");
+	
 }
 
-function AddScore(number : int){
-	
-	score += number;
-	text.text = "Score: " + score;
 
+function AddScore(number : int){
+	score += number;
+	Debug.Log("score script" + score);
 }

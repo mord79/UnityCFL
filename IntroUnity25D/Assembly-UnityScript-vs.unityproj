@@ -50,6 +50,7 @@
      <Compile Include="Assets\scripts\EndLevel.js" />
      <Compile Include="Assets\scripts\MouvementCC.js" />
      <Compile Include="Assets\scripts\Score.js" />
+     <Compile Include="Assets\scripts\UI.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>

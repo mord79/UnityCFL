@@ -10,7 +10,7 @@ var collisionTag : String = hit.collider.tag;
 		if(collisionTag == "Collectible"){
 			gameManager.GetComponent(Score).AddScore(collectibleScore);
 			Destroy(hit.gameObject);
-			Debug.Log("Score: "+gameManager.GetComponent(Score).score);	
+			//Debug.Log("Score: "+gameManager.GetComponent(Score).score);	
 		}
 
 
