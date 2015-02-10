@@ -3,11 +3,12 @@
 import UnityEngine.UI;
 
 var text : Text;
-var gameManagerScore : Score;
+var gameManagerScore : GlobalVariables;
 
 function Start () {
 	text = GetComponent(Text);
-	gameManagerScore = GameObject.Find("GameManager").GetComponent("Score");
+	gameManagerScore = GameObject.Find("GameManager").GetComponent("GlobalVariables");
+	
 	
 }
 

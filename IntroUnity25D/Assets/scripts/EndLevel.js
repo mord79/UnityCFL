@@ -1,20 +1,19 @@
 ﻿#pragma strict
 
 var nbOfCollectible : GameObject[];
-
-
-function Start () {
-
-
-
-}
+var level : int;
+level = Application.loadedLevel;
 
 function Update () {
 nbOfCollectible = GameObject.FindGameObjectsWithTag("Collectible");
 	
 	
 	if(nbOfCollectible.length == 0){
-	Debug.Log("fin");
-	Application.LoadLevel("scene2");
+		if(Application.loadedLevelName == "scene2"){
+			Destroy(gameObject);
+			Application.LoadLevel("Intro");
+		} else {
+			 Application.LoadLevel(level + 1);
+		}
 	}
 }

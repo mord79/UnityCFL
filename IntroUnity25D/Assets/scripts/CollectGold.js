@@ -4,12 +4,12 @@ var collectibleScore: int;
 var gameManager : GameObject;
 gameManager = GameObject.Find("GameManager");
 
-function  OnControllerColliderHit (hit : ControllerColliderHit){
-var collisionTag : String = hit.collider.tag;
+function  OnTriggerEnter (other : Collider){
+	var collisionTag : String = other.gameObject.tag;
 
-		if(collisionTag == "Collectible"){
-			gameManager.GetComponent(Score).AddScore(collectibleScore);
-			Destroy(hit.gameObject);
+		if(collisionTag == "Player"){
+			gameManager.GetComponent(GlobalVariables).AddScore(collectibleScore);
+			Destroy(gameObject);
 			//Debug.Log("Score: "+gameManager.GetComponent(Score).score);	
 		}
 

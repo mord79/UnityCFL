@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Balise.js" />
      <Compile Include="Assets\scripts\CollectGold.js" />
      <Compile Include="Assets\scripts\EndLevel.js" />
+     <Compile Include="Assets\scripts\GlobalVariables.js" />
      <Compile Include="Assets\scripts\MouvementCC.js" />
-     <Compile Include="Assets\scripts\Score.js" />
+     <Compile Include="Assets\scripts\MouvementEnnemi.js" />
      <Compile Include="Assets\scripts\UI.js" />
+     <Compile Include="Assets\scripts\buttonMenu.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
