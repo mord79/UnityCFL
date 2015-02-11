@@ -67,20 +67,26 @@ function Update () {
 	}
 		
 	// controle du saut
-	if(controller.isGrounded ){
+	if(controller.isGrounded){
 		gravitySpeed = 0;
 		if(Input.GetKey(KeyCode.Space)){
+			gravitySpeed = 0;
 			Jump(jumpSpeed);
 			}
 	}else if(!controller.isGrounded){
 			controller.Move(Vector3.down*gravitySpeed*Time.deltaTime);
+			if(Input.GetKey(KeyCode.Space) && controller.isGrounded){
+			Jump(jumpSpeed);
+			}
 			
 	}
 	
-	// gravité
+
 	if(gravitySpeed < gravity){
 			gravitySpeed ++;
-			}
+	}
+	
+Debug.Log("isgrounded: " + controller.isGrounded);
 		
 }
 
