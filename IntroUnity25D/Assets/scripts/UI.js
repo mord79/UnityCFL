@@ -7,7 +7,7 @@ var gameManagerScore : GlobalVariables;
 
 function Start () {
 	text = GetComponent(Text);
-	gameManagerScore = GameObject.Find("GameManager").GetComponent("GlobalVariables");
+	gameManagerScore = GameObject.Find("GameManager").GetComponent(GlobalVariables);
 	
 	
 }

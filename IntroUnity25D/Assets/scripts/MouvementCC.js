@@ -20,6 +20,9 @@ function Start () {
 
 function Update () {
 	
+
+	
+	// mouve joueur
 	controller.Move(Vector3(directionX*Time.deltaTime,0,directionZ*Time.deltaTime));
 	
 	
