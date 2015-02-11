@@ -94,7 +94,7 @@ MonoBehaviour:
   distanceZ: 0
   distanceXTemp: 0
   distanceZTemp: 0
-  facteurDeplacement: 0
+  facteurDeplacement: 2
   differenceX: 0
   differenceZ: 0
 --- !u!124 &12438626

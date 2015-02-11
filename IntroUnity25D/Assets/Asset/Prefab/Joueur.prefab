@@ -31,6 +31,7 @@ GameObject:
   - 33: {fileID: 3384494}
   - 23: {fileID: 2384494}
   - 114: {fileID: 11484494}
+  - 114: {fileID: 11486214}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -159,6 +160,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c612c16d18c2e5a44a56c699801f42e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11486214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a27d3707e0bff3439336c39ff3af211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletObject: {fileID: 186064, guid: f42536b71e0f9a34790dd3046aea5962, type: 2}
+  rateOfFire: .200000003
 --- !u!143 &14352850
 CharacterController:
   m_ObjectHideFlags: 1

@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShootBullet.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Bullet.js">
     <Files>
       <File FileName="Assets\scripts\ShootBullet.js" Line="25" Column="2" />
-      <File FileName="Assets\scripts\Bullet.js" Line="9" Column="1" />
-      <File FileName="Assets\scripts\MouvementCC.js" Line="89" Column="3" />
+      <File FileName="Assets\scripts\Bullet.js" Line="14" Column="1" />
+      <File FileName="Assets\scripts\MouvementCC.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\CameraFollow.js" Line="32" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
