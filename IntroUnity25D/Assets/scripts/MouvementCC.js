@@ -86,7 +86,7 @@ function Update () {
 			gravitySpeed ++;
 	}
 	
-Debug.Log("isgrounded: " + controller.isGrounded);
+//Debug.Log("isgrounded: " + controller.isGrounded);
 		
 }
 

@@ -47,12 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\Balise.js" />
+     <Compile Include="Assets\scripts\Bullet.js" />
      <Compile Include="Assets\scripts\CollectGold.js" />
      <Compile Include="Assets\scripts\EndLevel.js" />
      <Compile Include="Assets\scripts\GlobalVariables.js" />
      <Compile Include="Assets\scripts\MouseLookTD.js" />
      <Compile Include="Assets\scripts\MouvementCC.js" />
      <Compile Include="Assets\scripts\MouvementEnnemi.js" />
+     <Compile Include="Assets\scripts\MoveBullet.js" />
+     <Compile Include="Assets\scripts\ShootBullet.js" />
      <Compile Include="Assets\scripts\UI.js" />
      <Compile Include="Assets\scripts\buttonMenu.js" />
  <Reference Include="UnityEngine.UI">

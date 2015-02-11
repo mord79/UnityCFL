@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MouvementCC.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShootBullet.js">
     <Files>
-      <File FileName="Assets\scripts\MouvementCC.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MouvementCC.js" Line="69" Column="1" />
       <File FileName="Assets\scripts\GlobalVariables.js" Line="1" Column="1" />
-      <File FileName="Assets\scripts\MouseLookTD.js" Line="12" Column="78" />
+      <File FileName="Assets\scripts\MouseLookTD.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShootBullet.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
