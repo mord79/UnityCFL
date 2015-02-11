@@ -21,6 +21,7 @@ function Update () {
 function ShootBullet(){
 	
 	Instantiate(bulletObject, transform.position, transform.rotation);
+	
 	while(Input.GetMouseButton(0)){
 		
 		Instantiate(bulletObject, transform.position, transform.rotation);

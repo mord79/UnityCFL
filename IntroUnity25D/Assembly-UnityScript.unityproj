@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\Balise.js" />
      <Compile Include="Assets\scripts\Bullet.js" />
+     <Compile Include="Assets\scripts\CameraFollow.js" />
      <Compile Include="Assets\scripts\CollectGold.js" />
      <Compile Include="Assets\scripts\EndLevel.js" />
      <Compile Include="Assets\scripts\GlobalVariables.js" />
