@@ -20,6 +20,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &170996
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 470996}
+  - 114: {fileID: 11470996}
+  m_Layer: 0
+  m_Name: GunCannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &184494
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +47,6 @@ GameObject:
   - 33: {fileID: 3384494}
   - 23: {fileID: 2384494}
   - 114: {fileID: 11484494}
-  - 114: {fileID: 11486214}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -46,11 +61,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.57999992, z: 0}
+  m_LocalPosition: {x: -2.0999999, y: 4.9000001, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 484494}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &470996
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: .629999995}
+  m_LocalScale: {x: 4, y: 2, z: .960782468}
+  m_Children: []
+  m_Father: {fileID: 484494}
   m_RootOrder: 0
 --- !u!4 &484494
 Transform:
@@ -59,9 +86,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .560000002, y: -.0430000015, z: .419999987}
+  m_LocalPosition: {x: .560000002, y: -.330000013, z: .419999987}
   m_LocalScale: {x: .25, y: .25, z: 1.04081833}
-  m_Children: []
+  m_Children:
+  - {fileID: 470996}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!23 &2300000
@@ -129,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9a973315eea624e8edc3c8ab6a3825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
+  maxSpeed: 10
   speed: 0
   accelerationRate: 1
   deccelerationRate: 1.5
@@ -149,6 +177,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c612c16d18c2e5a44a56c699801f42e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11470996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a27d3707e0bff3439336c39ff3af211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletObject: {fileID: 486064, guid: f42536b71e0f9a34790dd3046aea5962, type: 2}
+  rateOfFire: .300000012
+  timer: 0
 --- !u!114 &11484494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,19 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c612c16d18c2e5a44a56c699801f42e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11486214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a27d3707e0bff3439336c39ff3af211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletObject: {fileID: 186064, guid: f42536b71e0f9a34790dd3046aea5962, type: 2}
-  rateOfFire: .200000003
 --- !u!143 &14352850
 CharacterController:
   m_ObjectHideFlags: 1

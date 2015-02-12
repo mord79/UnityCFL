@@ -5,9 +5,12 @@ var mouvementSpeed : float;
 var playerObject : Transform;
 var groupe: Transform;
 
-groupe = GameObject.Find("GroupeBullets").transform;
-playerObject = GameObject.Find("Joueur").transform;
 
+function Start(){
+	groupe = GameObject.Find("GroupeBullets").transform;
+	playerObject = GameObject.Find("Joueur").transform;
+
+}
 
 
 function Update () {
@@ -21,3 +24,8 @@ function Update () {
 	}
 
 }
+
+ function OnTriggerEnter(other: Collider) {
+    Debug.Log("Collision");
+    Destroy(gameObject);
+ }
