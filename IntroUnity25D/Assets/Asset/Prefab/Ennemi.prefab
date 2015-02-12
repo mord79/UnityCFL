@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2302116}
   - 143: {fileID: 14302116}
   - 114: {fileID: 11402116}
+  - 114: {fileID: 11415498}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Ennemi
@@ -79,6 +80,18 @@ MonoBehaviour:
   directionX: 0
   directionZ: 0
   setDirection: Left
+--- !u!114 &11415498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e8a71123f90ed4d9cd56e5f4797c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsVie: 3
 --- !u!143 &14302116
 CharacterController:
   m_ObjectHideFlags: 1

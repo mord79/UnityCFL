@@ -166,6 +166,7 @@ MonoBehaviour:
   mouvementSpeed: 20
   playerObject: {fileID: 0}
   groupe: {fileID: 0}
+  degas: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

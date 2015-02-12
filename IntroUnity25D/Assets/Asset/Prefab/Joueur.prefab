@@ -13,6 +13,7 @@ GameObject:
   - 143: {fileID: 14352850}
   - 114: {fileID: 11460302}
   - 114: {fileID: 11466030}
+  - 114: {fileID: 11442038}
   m_Layer: 0
   m_Name: Joueur
   m_TagString: Player
@@ -146,6 +147,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184494}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11442038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e8a71123f90ed4d9cd56e5f4797c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsVie: 10
 --- !u!114 &11460302
 MonoBehaviour:
   m_ObjectHideFlags: 1

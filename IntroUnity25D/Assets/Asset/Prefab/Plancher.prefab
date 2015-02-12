@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11404914}
+  - 114: {fileID: 11498380}
   m_Layer: 0
   m_Name: Plancher
   m_TagString: plateform
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.8400002, y: -8, z: -25}
-  m_LocalScale: {x: 36.1464653, y: 3.85874891, z: 36.1464539}
+  m_LocalPosition: {x: 21.7000008, y: -7.5, z: -24.7000008}
+  m_LocalScale: {x: 28.0440388, y: 3.54136562, z: 30.3765106}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -70,7 +70,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11404914
+--- !u!114 &11498380
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,14 +78,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c59f6df3a454c45b02f888b7570f2d, type: 3}
+  m_Script: {fileID: 11500000, guid: ff3486adb5c1d054b802d5e73cef3305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScaleToTilesX: 1
-  ScaleToTilesY: 1
-  texture: {fileID: 2800000, guid: 1200bb934e613e64bb6c865a58f0465a, type: 3}
-  textureX: 1
-  textureY: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

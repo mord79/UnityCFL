@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\TextureTilling.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\PointsVie.js">
     <Files>
-      <File FileName="Assets\scripts\TextureTilling.js" Line="9" Column="24" />
-      <File FileName="Assets\scripts\Bullet.js" Line="17" Column="1" />
+      <File FileName="Assets\scripts\Bullet.js" Line="30" Column="1" />
       <File FileName="Assets\scripts\ShootBullet.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\MouseLookTD.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ReCalcCubeTexture.cs" Line="24" Column="1" />
+      <File FileName="Assets\scripts\PointsVie.js" Line="34" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

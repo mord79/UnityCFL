@@ -4,6 +4,7 @@ var maxDistance: float;
 var mouvementSpeed : float;
 var playerObject : Transform;
 var groupe: Transform;
+var degas : int;
 
 
 function Start(){
@@ -26,6 +27,13 @@ function Update () {
 }
 
  function OnTriggerEnter(other: Collider) {
-//    Debug.Log("Collision");
+    Debug.Log("Collision");
     Destroy(gameObject);
+    	if(other.GetComponent(PointsVie)){
+    		var pointVieOther = other.GetComponent(PointsVie);
+    		
+    		pointVieOther.SubstractPointsVie(degas);
+    		
+    	
+    	}
  }
