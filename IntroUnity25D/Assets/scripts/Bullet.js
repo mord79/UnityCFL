@@ -26,6 +26,6 @@ function Update () {
 }
 
  function OnTriggerEnter(other: Collider) {
-    Debug.Log("Collision");
+//    Debug.Log("Collision");
     Destroy(gameObject);
  }
