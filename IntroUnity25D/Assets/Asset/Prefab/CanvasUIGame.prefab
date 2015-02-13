@@ -78,7 +78,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Score:
 
-'
+    Gold:'
 --- !u!114 &11471776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  gameManagerScore: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!222 &22271774
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -166,8 +166,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 101, y: -44}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 101, y: -120.300003}
+  m_SizeDelta: {x: 160, y: 200}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22471776
 RectTransform:

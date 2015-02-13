@@ -182,6 +182,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 140996, guid: af87ef5e2ef108243883339879a6212f, type: 2}
+      propertyPath: m_Name
+      value: MenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440996, guid: af87ef5e2ef108243883339879a6212f, type: 2}
+      propertyPath: gotoScene
+      value: scene1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af87ef5e2ef108243883339879a6212f, type: 2}
   m_RootGameObject: {fileID: 1408873195}
@@ -364,7 +372,7 @@ GameObject:
   - 4: {fileID: 1408873197}
   - 114: {fileID: 1408873196}
   m_Layer: 0
-  m_Name: MenuIntroManager
+  m_Name: MenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce634238581782546ad77324e78531d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gotoScene: scene1
 --- !u!4 &1408873197
 Transform:
   m_ObjectHideFlags: 0

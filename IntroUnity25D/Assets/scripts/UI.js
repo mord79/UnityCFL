@@ -3,14 +3,9 @@
 import UnityEngine.UI;
 
 var text : Text;
-var gameManagerScore : GlobalVariables;
-
-function Start () {
-	text = GetComponent(Text);
-	gameManagerScore = GameObject.Find("GameManager").GetComponent(GlobalVariables);
-	
-	
-}
+var gameManager : GameManagerScript;
+text = GetComponent(Text);
+	gameManager = GameObject.Find("GameManager").GetComponent(GameManagerScript);
 
 
 function Update(){
@@ -19,5 +14,5 @@ function Update(){
 
 
 function UpdateScore(){
-	text.text = "Score: " + gameManagerScore.score;
+	text.text = "Score: " + gameManager.score + "\nGold: " + gameManager.gold;
 }

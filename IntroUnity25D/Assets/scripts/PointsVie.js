@@ -1,6 +1,8 @@
 ﻿#pragma strict
 
 var pointsVie : int;
+var gameManager : GameManagerScript;
+gameManager = GameObject.Find("GameManager").GetComponent(GameManagerScript);
 
 function Start () {
 
@@ -30,7 +32,14 @@ function SubstractPointsVie(nb : int){
 
 function Mourir (){
 
-	Debug.Log("Je meurt!!!");	
-	Destroy(gameObject);
+	//Debug.Log("Je meurt!!!");	
+	
+	if (transform.tag == "Player"){
+	//	Debug.Log("Goto End");
+		gameManager.GotoLevel("End");
+		
+	} else {
+		Destroy(gameObject);
+	}
 
 }

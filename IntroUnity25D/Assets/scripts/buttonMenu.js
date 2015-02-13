@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
+var gotoScene : String;
+
 function onClick(){
 
-	Application.LoadLevel("scene1");
+	Application.LoadLevel(gotoScene);
 
 }
