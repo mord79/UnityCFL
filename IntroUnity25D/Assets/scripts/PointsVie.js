@@ -25,7 +25,7 @@ function AddPointsVie(nb : int){
 }
 
 function SubstractPointsVie(nb : int){
-	Debug.Log("je perds " + nb + "points de vie!");
+//	Debug.Log("je perds " + nb + "points de vie!");
 	pointsVie -= nb;
 
 }

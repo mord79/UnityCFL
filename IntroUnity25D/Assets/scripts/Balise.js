@@ -1,13 +1,43 @@
 ﻿#pragma strict
 
-var baliseDirection : String;
+var ennemiID : int;
+var ennemitemp : GameObject[];
+var ennemi : GameObject;
+var ennemiMouvementScript : MouvementEnnemi;
+
+
+
+function Start(){
+	
+	ennemitemp = GameObject.FindGameObjectsWithTag("Ennemi");
+	
+		for(var ennemiLoop : GameObject in ennemitemp){
+		
+			if(ennemiLoop.GetComponent(MouvementEnnemi).ennemiID == ennemiID){
+			
+				ennemi = ennemiLoop;
+			}
+		
+		}
+	
+	ennemiMouvementScript = ennemi.GetComponent(MouvementEnnemi);
+
+}
 
 function OnTriggerEnter(other : Collider){
 
-	if(other.gameObject.tag == "Ennemi"){
+	if(other.tag == "Ennemi"){
 	
-	var mouvementEnnemi : MouvementEnnemi = other.gameObject.GetComponent(MouvementEnnemi);
-	mouvementEnnemi.setDirection = baliseDirection;
+		if(ennemiMouvementScript.baliseNo < ennemiMouvementScript.baliseNoStart){
+					ennemiMouvementScript.baliseNo ++;
+					//Debug.Log("BaliseNO +1");
+					
+				} else {
+					ennemiMouvementScript.baliseNo = 0;
+					//Debug.Log("=BaliseNo=0");
+				
+				
+				}
 	
 	}
 

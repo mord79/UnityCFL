@@ -27,11 +27,12 @@ function Update () {
 }
 
  function OnTriggerEnter(other: Collider) {
-    Debug.Log("Collision");
-    Destroy(gameObject);
+//    Debug.Log("Collision");
+    	
+    	if(other.tag != "Detector")  Destroy(gameObject);
+  
     	if(other.GetComponent(PointsVie)){
     		var pointVieOther = other.GetComponent(PointsVie);
-    		
     		pointVieOther.SubstractPointsVie(degas);
     		
     	

@@ -7,6 +7,8 @@ TagManager:
   - Ennemi
   - plateform
   - Bullet
+  - Detector
+  - Balise
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

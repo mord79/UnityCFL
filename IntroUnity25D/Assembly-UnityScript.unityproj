@@ -55,6 +55,7 @@
      <Compile Include="Assets\scripts\MouvementCC.js" />
      <Compile Include="Assets\scripts\MouvementEnnemi.js" />
      <Compile Include="Assets\scripts\MoveBullet.js" />
+     <Compile Include="Assets\scripts\PlayerDetector.js" />
      <Compile Include="Assets\scripts\PointsVie.js" />
      <Compile Include="Assets\scripts\ShootBullet.js" />
      <Compile Include="Assets\scripts\UI.js" />
