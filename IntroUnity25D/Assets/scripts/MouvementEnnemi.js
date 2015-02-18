@@ -13,7 +13,7 @@ private var gravitySpeed : float;
 
 
 // BALISE
-var baliseArray = new Array();
+var baliseArray : GameObject[];
 var baliseNo : int = 0; 
 var baliseNoStart : int;
 
@@ -30,15 +30,6 @@ playerTransform = GameObject.Find("Joueur").GetComponent(Transform);
 
 
 function Start () {
-	
-	baliseArray = GameObject.FindGameObjectsWithTag("Balise");
-	
-	for(var i : int = 0 ; 1 < baliseArray.length  ; i++){
-		var baliseObject : GameObject = baliseArray[i];
-		if(baliseObject.GetComponent(Balise).ennemiID != ennemiID){
-			baliseArray.RemoveAt(i);
-		}
-	}
 	
 	baliseNoStart = baliseArray.length -1;
 	
