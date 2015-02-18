@@ -94,9 +94,10 @@ function NormalMove(){
 
 function HuntMove(){
 	
-	var ennemiPos = transform.position;
-	var playerPos = playerTransform.position;
-	var offset = playerPos-ennemiPos;
+	var ennemiPos : Vector3 = transform.position;
+	var playerPos : Vector3 = playerTransform.position;
+	//var offset : Vector3 = playerPos-ennemiPos;
+	var offset : Vector3 = Vector3(playerPos.x-ennemiPos.x,0,playerPos.z-ennemiPos.z);
 	offset = offset.normalized;
 	controller.Move(offset*maxSpeed*Time.deltaTime);
 

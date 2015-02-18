@@ -1,18 +1,12 @@
 ﻿<Properties>
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MouvementEnnemi.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerDetector.js">
     <Files>
-      <File FileName="Assets\scripts\MouvementEnnemi.js" Line="90" Column="49" />
-      <File FileName="Assets\scripts\Balise.js" Line="16" Column="68" />
-      <File FileName="Assets\scripts\PointsVie.js" Line="28" Column="3" />
-      <File FileName="Assets\scripts\Bullet.js" Line="30" Column="3" />
-=======
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../ProjetSon3D/Son3D/Assets/README_FIRST.txt">
-    <Files>
-      <File FileName="../ProjetSon3D/Son3D/Assets/README_FIRST.txt" Line="1" Column="1" />
->>>>>>> Stashed changes
+      <File FileName="Assets/scripts/Balise.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/MouvementEnnemi.js" Line="81" Column="1" />
+      <File FileName="Assets/scripts/PointsVie.js" Line="40" Column="4" />
+      <File FileName="Assets/scripts/PlayerDetector.js" Line="10" Column="40" />
+      <File FileName="Assets/scripts/MouvementCC.js" Line="105" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

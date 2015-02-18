@@ -9,6 +9,10 @@ TagManager:
   - Bullet
   - Detector
   - Balise
+  - Sensor_Player
+  - Sensor_Ennemi
+  - 
+  - Sensor_Detector
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

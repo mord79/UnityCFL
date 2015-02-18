@@ -5,21 +5,25 @@ moveEnnemiScript = transform.GetComponentInParent(MouvementEnnemi);
 var playerDetected;
 
 
-function OnTriggerEnter (other : Collider) {
+	
+function OnTriggerStay (other : Collider) {
+		var pvScript : PointsVie;
+		pvScript = other.GetComponentInParent(PointsVie);
+	
 		
-		if (other.tag == "Player") {
+		if (other.tag == "Sensor_Player" && pvScript.pointsVie > 0) {
+//				Debug.Log("Player Detected");
 			playerDetected = true;
-		}else if (other.tag != "Player"){
-			playerDetected = false;
 		}
 		
 		
-	}
+}
 	
 	
+
 function OnTriggerExit (other : Collider) {
 		
-		if (other.tag == "Player") 
+		if (other.tag == "Sensor_Player") 
 			playerDetected = false;
 		
 		

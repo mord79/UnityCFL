@@ -36,6 +36,10 @@ function Mourir (){
 	
 	if (transform.tag == "Player"){
 	//	Debug.Log("Goto End");
+		
+		gameObject.renderer.enabled = false;
+		gameObject.transform.Find("Gun").renderer.enabled = false;
+		yield WaitForSeconds(2.0);
 		gameManager.GotoLevel("End");
 		
 	} else {

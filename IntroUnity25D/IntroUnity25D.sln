@@ -1,9 +1,15 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{73F67373-8242-4838-4C85-F0B2FE4A0CA2}") = "IntroUnity25D", "Assembly-CSharp-firstpass.csproj", "{94997FFE-CB4D-D819-212C-65CA1E5F7CB8}"
+EndProject
 Project("{73F67373-8242-4838-4C85-F0B2FE4A0CA2}") = "IntroUnity25D", "Assembly-CSharp.csproj", "{7FF111D9-E06E-4131-A0A3-56A53A66C7CB}"
 EndProject
+Project("{73F67373-8242-4838-4C85-F0B2FE4A0CA2}") = "IntroUnity25D", "Assembly-UnityScript-firstpass.unityproj", "{00E41A9E-573D-8FEF-C5EF-C1F41B14BFD3}"
+EndProject
 Project("{73F67373-8242-4838-4C85-F0B2FE4A0CA2}") = "IntroUnity25D", "Assembly-UnityScript.unityproj", "{2DC41F92-FDA3-2192-8C13-C4D00A2B2D83}"
+EndProject
+Project("{73F67373-8242-4838-4C85-F0B2FE4A0CA2}") = "IntroUnity25D", "Assembly-UnityScript-Editor.unityproj", "{9DDB6FEC-5D8D-7363-580E-657FAA2F121D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,19 +17,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94997FFE-CB4D-D819-212C-65CA1E5F7CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94997FFE-CB4D-D819-212C-65CA1E5F7CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94997FFE-CB4D-D819-212C-65CA1E5F7CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94997FFE-CB4D-D819-212C-65CA1E5F7CB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7FF111D9-E06E-4131-A0A3-56A53A66C7CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FF111D9-E06E-4131-A0A3-56A53A66C7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF111D9-E06E-4131-A0A3-56A53A66C7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FF111D9-E06E-4131-A0A3-56A53A66C7CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E41A9E-573D-8FEF-C5EF-C1F41B14BFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E41A9E-573D-8FEF-C5EF-C1F41B14BFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E41A9E-573D-8FEF-C5EF-C1F41B14BFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E41A9E-573D-8FEF-C5EF-C1F41B14BFD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DC41F92-FDA3-2192-8C13-C4D00A2B2D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DC41F92-FDA3-2192-8C13-C4D00A2B2D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DC41F92-FDA3-2192-8C13-C4D00A2B2D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DC41F92-FDA3-2192-8C13-C4D00A2B2D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDB6FEC-5D8D-7363-580E-657FAA2F121D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDB6FEC-5D8D-7363-580E-657FAA2F121D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDB6FEC-5D8D-7363-580E-657FAA2F121D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDB6FEC-5D8D-7363-580E-657FAA2F121D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																							GlobalSection(MonoDevelopProperties) = preSolution
+																																																																												GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																						GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> Stashed changes

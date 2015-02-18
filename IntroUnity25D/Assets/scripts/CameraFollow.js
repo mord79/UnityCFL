@@ -12,8 +12,8 @@ var differenceZ : float;
 
 function Start () {
 
-	distanceX = joueur.transform.position.x - transform.position.x;
-	distanceZ = joueur.transform.position.z - transform.position.z;
+	//distanceX = joueur.transform.position.x - transform.position.x;
+	//distanceZ = joueur.transform.position.z - transform.position.z;
 
 }
 

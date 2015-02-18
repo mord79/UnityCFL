@@ -5,7 +5,7 @@ var mouvementSpeed : float;
 var playerObject : Transform;
 var groupe: Transform;
 var degas : int;
-
+//var particules : GameObject;
 
 function Start(){
 	groupe = GameObject.Find("GroupeBullets").transform;
@@ -29,7 +29,14 @@ function Update () {
  function OnTriggerEnter(other: Collider) {
 //    Debug.Log("Collision");
     	
-    	if(other.tag != "Detector")  Destroy(gameObject);
+    	if (other.tag != "Balise"){
+    		if(other.tag != "Detector"){
+    			
+    			//Instantiate(particules,transform.position,transform.rotation);
+    			Destroy(gameObject);
+    			
+    			}
+    		}
   
     	if(other.GetComponent(PointsVie)){
     		var pointVieOther = other.GetComponent(PointsVie);
