@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerDetector.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../TestingStuff/Assets/Script/Utilities.js">
     <Files>
-      <File FileName="Assets/scripts/Balise.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/MouvementEnnemi.js" Line="81" Column="1" />
-      <File FileName="Assets/scripts/PointsVie.js" Line="40" Column="4" />
-      <File FileName="Assets/scripts/PlayerDetector.js" Line="10" Column="40" />
-      <File FileName="Assets/scripts/MouvementCC.js" Line="105" Column="14" />
+      <File FileName="../TestingStuff/Assets/Script/Utilities.js" Line="9" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
