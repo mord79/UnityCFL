@@ -110,8 +110,8 @@ public class ReCalcCubeTexture : MonoBehaviour
 			//apply new UV map
 			mesh.uv = mesh_UVs;
 			mesh.name = "Cube Instance";
-			if ( renderer.sharedMaterial.mainTexture.wrapMode != TextureWrapMode.Repeat )
-				renderer.sharedMaterial.mainTexture.wrapMode = TextureWrapMode.Repeat;
+			if ( GetComponent<Renderer>().sharedMaterial.mainTexture.wrapMode != TextureWrapMode.Repeat )
+				GetComponent<Renderer>().sharedMaterial.mainTexture.wrapMode = TextureWrapMode.Repeat;
 			
 		}
 	}

@@ -37,8 +37,8 @@ function Mourir (){
 	if (transform.tag == "Player"){
 	//	Debug.Log("Goto End");
 		
-		gameObject.renderer.enabled = false;
-		gameObject.transform.Find("Gun").renderer.enabled = false;
+		gameObject.GetComponent.<Renderer>().enabled = false;
+		gameObject.transform.Find("Gun").GetComponent.<Renderer>().enabled = false;
 		yield WaitForSeconds(2.0);
 		gameManager.GotoLevel("End");
 		

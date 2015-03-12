@@ -9,7 +9,7 @@ var ennemi : GameObject;
 
 function Start(){
 	
-	gameObject.renderer.enabled = false;
+	gameObject.GetComponent.<Renderer>().enabled = false;
 	ennemitemp = GameObject.FindGameObjectsWithTag("Ennemi");
 	
 		for(var ennemiLoop : GameObject in ennemitemp){
