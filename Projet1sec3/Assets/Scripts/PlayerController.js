@@ -43,10 +43,16 @@ function Update () {
 		}
 		
 		if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down),1)){
-			myRigidBody.AddForce(Vector3.up*jump);
 			
+			Jump();
 		}
 			
+
+}
+
+function Jump(){
+
+	myRigidBody.AddForce(Vector3.up*jump);
 
 }
 
@@ -56,8 +62,9 @@ function OnCollisionEnter(other : Collision){
 		if(other.gameObject.tag == "Ennemi" && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down),hit,1)){	
 			
 			if(hit.collider.tag == "Ennemi"){
+				Jump();
+				Destroy(other.gameObject);
 				
-				Debug.Log("je te touche!");
 			}
 			
 		}
