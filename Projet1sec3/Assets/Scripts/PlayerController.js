@@ -6,11 +6,18 @@ var maxSpeed : float;
 // magnitude est la vitesse absolue de mon objet
 var magnitude : float;
 
+// vitesse de direction
+var directionX : float;
+var directionZ : float;
+
 var speed : float;
 var jump : float;
 var monNom : String; 
 // Variable pour aller chercher mon RigidBody
 private var myRigidBody : Rigidbody;
+
+// aller chercher mon script PlayerCollection
+ var playerCollectionScript : PlayerCollection;
 
 
 function Start () {
@@ -19,12 +26,14 @@ function Start () {
 	myRigidBody = GetComponent(Rigidbody);	
 	
 	Debug.Log("Bonjour je suis " + monNom);
-
+	
 }
 
 function Update () {
 	magnitude = myRigidBody.velocity.magnitude; 
-	
+	directionX = myRigidBody.velocity.x;
+	directionZ = myRigidBody.velocity.z;
+	transform.LookAt(Vector3(directionX,0,directionZ),Vector3.up);
 
 		if(Input.GetKey(KeyCode.RightArrow) && magnitude < maxSpeed){
 			myRigidBody.AddForce(Vector3.right*speed);
@@ -61,9 +70,15 @@ function OnCollisionEnter(other : Collision){
 		var hit : RaycastHit; 			
 		if(other.gameObject.tag == "Ennemi" && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down),hit,1)){	
 			
+			// destroy l'ennemi
 			if(hit.collider.tag == "Ennemi"){
 				Jump();
 				Destroy(other.gameObject);
+			
+			// destroy le joueur	
+			} else if(hit.collider.tag != "Ennemi"){
+				transform.DetachChildren();
+				Destroy(gameObject);
 				
 			}
 			

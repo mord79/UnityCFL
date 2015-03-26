@@ -11,15 +11,21 @@ function Update () {
 
 }
 
-function OnCollisionEnter(other: Collision){
+function OnTriggerEnter(other: Collider){
 
 
-			if(other.collider.tag == "Collectible"){
+			if(other.gameObject.tag == "Collectible"){
 				
-				score += 100;
+				AddScore(100);
 				Destroy(other.gameObject);
 				Debug.Log("Score: "+score);
 				
 			}
 			
+}
+
+function AddScore(scoreAdded : int){
+
+	score += scoreAdded;
+
 }
