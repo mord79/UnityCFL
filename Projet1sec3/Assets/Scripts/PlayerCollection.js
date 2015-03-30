@@ -1,13 +1,20 @@
 ﻿#pragma strict
 
-var score : int;
+import UnityEngine.UI;
 
+var score : int;
+var textUi : UnityEngine.UI.Text;
 
 function Start () {
+
+textUi = GameObject.Find("ScoreText").GetComponent(Text);
 
 }
 
 function Update () {
+
+
+textUi.text = "SCORE: " + score;
 
 }
 
