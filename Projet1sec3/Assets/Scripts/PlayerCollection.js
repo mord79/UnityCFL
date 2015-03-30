@@ -18,7 +18,7 @@ function OnTriggerEnter(other: Collider){
 				
 				AddScore(100);
 				Destroy(other.gameObject);
-				Debug.Log("Score: "+score);
+				
 				
 			}
 			
@@ -27,5 +27,6 @@ function OnTriggerEnter(other: Collider){
 function AddScore(scoreAdded : int){
 
 	score += scoreAdded;
-
+	print("Score: "+score);
+	
 }
