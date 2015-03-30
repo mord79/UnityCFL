@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
-function OnBouttonClic(){
+function OnButtonClic(){
+
 
 	Application.LoadLevel(1);
 
 }
+
