@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-function OnBouttonClic(){
+function OnBouttonClick(){
 
 	Application.LoadLevel(1);
 
