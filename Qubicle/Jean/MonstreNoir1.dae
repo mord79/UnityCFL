@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <authoring_tool>Minddesk Qubicle 2</authoring_tool>
+      <comments>Get Qubicle at www.minddesk.com</comments>
+    </contributor>
+    <created>2015-04-164:05 PM16:05:24:246</created>
+    <modified>2015-04-164:05 PM16:05:24:246</modified>
+    <unit meter="1.0" />
+  </asset>
+  <library_images>
+    <image id="MonstreNoir1-image" name="MonstreNoir1-image">
+      <init_from>file:///Materials/MonstreNoir1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="MonstreNoir1-material" name="MonstreNoir1-material">
+      <instance_effect url="#MonstreNoir1-shader-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="MonstreNoir1-shader-fx" name="MonstreNoir1-shader-fx">
+      <profile_COMMON>
+        <newparam sid="MonstreNoir1-image-surface">
+          <surface type="2D">
+            <init_from>MonstreNoir1-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="MonstreNoir1-image-sampler">
+          <sampler2D>
+            <source>MonstreNoir1-image-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NEAREST</minfilter>
+            <magfilter>NEAREST</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <lambert>
+            <ambient>
+              <color sid="ambient">0.0 0.0 0.0 1.0</color>
+            </ambient>
+            <diffuse>
+              <texture texcoord="CHANNEL0" texture="MonstreNoir1-image-sampler" />
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry name="Mini_monstre" id="Mini_monstre-lib">
+      <mesh>
+        <source id="Mini_monstre-position">
+          <float_array id="Mini_monstre-position-array" count="24">9.5 9.5 -0.5 9.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 9.5 -0.5 -0.5 9.5 9.5 -0.5 -0.5 9.5 9.5 -0.5 9.5 9.5 9.5 9.5 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre-normal">
+          <float_array id="Mini_monstre-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Mini_monstre-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre-uv">
+          <float_array id="Mini_monstre-uv-array" count="48">0.015625 0.171875 0.015625 0.015625 0.171875 0.015625 0.171875 0.171875 0.203125 0.171875 0.203125 0.015625 0.359375 0.015625 0.359375 0.171875 0.390625 0.171875 0.390625 0.015625 0.546875 0.015625 0.546875 0.171875 0.578125 0.171875 0.578125 0.015625 0.734375 0.015625 0.734375 0.171875 0.765625 0.171875 0.765625 0.015625 0.921875 0.015625 0.921875 0.171875 0.015625 0.359375 0.015625 0.203125 0.171875 0.203125 0.171875 0.359375 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Mini_monstre-vertex">
+          <input semantic="POSITION" source="#Mini_monstre-position" />
+        </vertices>
+        <polylist material="MonstreNoir1-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Mini_monstre-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Mini_monstre-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Mini_monstre-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 9 3 1 11 0 1 8 1 1 9 2 1 10 3 1 11 5 0 5 7 0 7 4 0 4 5 0 5 6 0 6 7 0 7 2 2 13 4 2 15 3 2 12 2 2 13 5 2 14 4 2 15 6 3 17 0 3 19 7 3 16 6 3 17 1 3 18 0 3 19 3 4 20 4 4 21 0 4 23 4 4 21 7 4 22 0 4 23 5 5 0 2 5 1 6 5 3 2 5 1 1 5 2 6 5 3 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Mini_monstre_Bob" id="Mini_monstre_Bob-lib">
+      <mesh>
+        <source id="Mini_monstre_Bob-position">
+          <float_array id="Mini_monstre_Bob-position-array" count="24">5.5 4.5 -0.5 5.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 4.5 -0.5 -0.5 4.5 4.5 -0.5 -0.5 4.5 5.5 -0.5 4.5 5.5 4.5 4.5 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Bob-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre_Bob-normal">
+          <float_array id="Mini_monstre_Bob-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Bob-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre_Bob-uv">
+          <float_array id="Mini_monstre_Bob-uv-array" count="48">0.15625 0.46875 0.15625 0.390625 0.25 0.390625 0.25 0.46875 0.28125 0.46875 0.28125 0.390625 0.375 0.390625 0.375 0.46875 0.40625 0.46875 0.40625 0.390625 0.5 0.390625 0.5 0.46875 0.53125 0.46875 0.53125 0.390625 0.625 0.390625 0.625 0.46875 0.90625 0.28125 0.90625 0.203125 0.984375 0.203125 0.984375 0.28125 0.65625 0.46875 0.65625 0.390625 0.734375 0.390625 0.734375 0.46875 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Bob-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Mini_monstre_Bob-vertex">
+          <input semantic="POSITION" source="#Mini_monstre_Bob-position" />
+        </vertices>
+        <polylist material="MonstreNoir1-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Mini_monstre_Bob-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Mini_monstre_Bob-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Mini_monstre_Bob-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 9 3 1 11 0 1 8 1 1 9 2 1 10 3 1 11 5 0 13 7 0 15 4 0 12 5 0 13 6 0 14 7 0 15 2 2 21 4 2 23 3 2 20 2 2 21 5 2 22 4 2 23 6 3 17 0 3 19 7 3 16 6 3 17 1 3 18 0 3 19 3 4 0 4 4 1 0 4 3 4 4 1 7 4 2 0 4 3 5 5 4 2 5 5 6 5 7 2 5 5 1 5 6 6 5 7 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Mini_monstre_Joe" id="Mini_monstre_Joe-lib">
+      <mesh>
+        <source id="Mini_monstre_Joe-position">
+          <float_array id="Mini_monstre_Joe-position-array" count="24">6.5 6.5 -0.5 6.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 6.5 -0.5 -0.5 6.5 6.5 -0.5 -0.5 6.5 6.5 -0.5 6.5 6.5 6.5 6.5 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Joe-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre_Joe-normal">
+          <float_array id="Mini_monstre_Joe-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Joe-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Mini_monstre_Joe-uv">
+          <float_array id="Mini_monstre_Joe-uv-array" count="48">0.203125 0.3125 0.203125 0.203125 0.3125 0.203125 0.3125 0.3125 0.34375 0.3125 0.34375 0.203125 0.453125 0.203125 0.453125 0.3125 0.484375 0.3125 0.484375 0.203125 0.59375 0.203125 0.59375 0.3125 0.625 0.3125 0.625 0.203125 0.734375 0.203125 0.734375 0.3125 0.765625 0.3125 0.765625 0.203125 0.875 0.203125 0.875 0.3125 0.015625 0.5 0.015625 0.390625 0.125 0.390625 0.125 0.5 </float_array>
+          <technique_common>
+            <accessor source="Mini_monstre_Joe-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Mini_monstre_Joe-vertex">
+          <input semantic="POSITION" source="#Mini_monstre_Joe-position" />
+        </vertices>
+        <polylist material="MonstreNoir1-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Mini_monstre_Joe-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Mini_monstre_Joe-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Mini_monstre_Joe-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 21 3 1 23 0 1 20 1 1 21 2 1 22 3 1 23 5 0 1 7 0 3 4 0 0 5 0 1 6 0 2 7 0 3 2 2 9 4 2 11 3 2 8 2 2 9 5 2 10 4 2 11 6 3 5 0 3 7 7 3 4 6 3 5 1 3 6 0 3 7 3 4 16 4 4 17 0 4 19 4 4 17 7 4 18 0 4 19 5 5 12 2 5 13 6 5 15 2 5 13 1 5 14 6 5 15 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="MonstreNoir1-scene" name="MonstreNoir1-scene">
+      <node sid="Mini_monstre" id="Mini_monstre" name="Mini_monstre">
+        <translate sid="translate">-43.50 0.50 -4.50</translate>
+        <instance_geometry url="#Mini_monstre-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="MonstreNoir1-material" target="#MonstreNoir1-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Mini_monstre_Bob" id="Mini_monstre_Bob" name="Mini_monstre_Bob">
+        <translate sid="translate">-26.50 0.50 -2.50</translate>
+        <instance_geometry url="#Mini_monstre_Bob-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="MonstreNoir1-material" target="#MonstreNoir1-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Mini_monstre_Joe" id="Mini_monstre_Joe" name="Mini_monstre_Joe">
+        <translate sid="translate">-33.50 0.50 -3.50</translate>
+        <instance_geometry url="#Mini_monstre_Joe-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="MonstreNoir1-material" target="#MonstreNoir1-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene name="" sid="" url="#MonstreNoir1-scene" />
+  </scene>
+</COLLADA>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <authoring_tool>Minddesk Qubicle 2</authoring_tool>
+      <comments>Get Qubicle at www.minddesk.com</comments>
+    </contributor>
+    <created>2015-04-161:05 PM13:05:31:571</created>
+    <modified>2015-04-161:05 PM13:05:31:571</modified>
+    <unit meter="1.0" />
+  </asset>
+  <library_images>
+    <image id="mouche-image" name="mouche-image">
+      <init_from>file:///Materials/mouche.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="mouche-material" name="mouche-material">
+      <instance_effect url="#mouche-shader-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="mouche-shader-fx" name="mouche-shader-fx">
+      <profile_COMMON>
+        <newparam sid="mouche-image-surface">
+          <surface type="2D">
+            <init_from>mouche-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mouche-image-sampler">
+          <sampler2D>
+            <source>mouche-image-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NEAREST</minfilter>
+            <magfilter>NEAREST</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <lambert>
+            <ambient>
+              <color sid="ambient">0.0 0.0 0.0 1.0</color>
+            </ambient>
+            <diffuse>
+              <texture texcoord="CHANNEL0" texture="mouche-image-sampler" />
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry name="xp" id="xp-lib">
+      <mesh>
+        <source id="xp-position">
+          <float_array id="xp-position-array" count="135">1.5 1.5 1.5 1.5 -0.5 1.5 0.5 -0.5 1.5 0.5 1.5 1.5 3.5 0.5 1.5 3.5 -0.5 1.5 1.5 0.5 1.5 3.5 1.5 -0.5 3.5 0.5 -0.5 1.5 0.5 -0.5 1.5 1.5 -0.5 0.5 0.5 2.5 0.5 -0.5 2.5 -0.5 -0.5 2.5 -0.5 0.5 2.5 1.5 1.5 3.5 1.5 0.5 3.5 0.5 0.5 3.5 0.5 1.5 3.5 0.5 1.5 4.5 0.5 -0.5 4.5 1.5 -0.5 4.5 1.5 1.5 4.5 1.5 0.5 4.5 3.5 -0.5 4.5 3.5 0.5 4.5 1.5 1.5 6.5 1.5 0.5 6.5 3.5 0.5 6.5 3.5 1.5 6.5 -0.5 0.5 3.5 -0.5 -0.5 3.5 0.5 -0.5 3.5 0.5 1.5 2.5 1.5 0.5 2.5 1.5 1.5 2.5 3.5 1.5 4.5 3.5 1.5 1.5 3.5 1.5 2.5 2.5 1.5 3.5 2.5 1.5 6.5 3.5 1.5 3.5 2.5 1.5 4.5 3.5 -0.5 2.5 3.5 -0.5 3.5 </float_array>
+          <technique_common>
+            <accessor source="xp-position-array" stride="3" count="45">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="xp-normal">
+          <float_array id="xp-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="xp-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="xp-uv">
+          <float_array id="xp-uv-array" count="296">0.03125 0.25 0.03125 0.0625 0.0625 0.0625 0.0625 0.25 0.125 0.1875 0.125 0.0625 0.21875 0.0625 0.21875 0.1875 0.28125 0.1875 0.28125 0.0625 0.34375 0.0625 0.34375 0.1875 0.40625 0.1875 0.40625 0.0625 0.46875 0.0625 0.46875 0.1875 0.53125 0.1875 0.53125 0.0625 0.59375 0.0625 0.59375 0.1875 0.65625 0.1875 0.65625 0.0625 0.6875 0.0625 0.6875 0.1875 0.75 0.1875 0.75 0.0625 0.78125 0.0625 0.78125 0.1875 0.84375 0.1875 0.84375 0.0625 0.875 0.0625 0.875 0.1875 0.9375 0.1875 0.9375 0.0625 0.96875 0.0625 0.96875 0.1875 0.03125 0.5 0.03125 0.375 0.0625 0.375 0.0625 0.5 0.125 0.4375 0.125 0.375 0.25 0.375 0.25 0.4375 0.3125 0.4375 0.3125 0.375 0.40625 0.375 0.40625 0.4375 0.46875 0.4375 0.46875 0.375 0.5625 0.375 0.5625 0.4375 0.625 0.4375 0.625 0.375 0.71875 0.375 0.71875 0.4375 0.78125 0.4375 0.78125 0.375 0.84375 0.375 0.84375 0.4375 0.90625 0.4375 0.90625 0.375 0.96875 0.375 0.96875 0.4375 0.03125 0.6875 0.03125 0.625 0.09375 0.625 0.09375 0.6875 0.15625 0.6875 0.15625 0.625 0.21875 0.625 0.21875 0.6875 0.28125 0.6875 0.28125 0.625 0.34375 0.625 0.34375 0.6875 0.40625 0.6875 0.40625 0.625 0.46875 0.625 0.46875 0.6875 0.53125 0.6875 0.53125 0.625 0.59375 0.625 0.59375 0.6875 0.65625 0.6875 0.65625 0.625 0.71875 0.625 0.71875 0.6875 0.78125 0.6875 0.78125 0.625 0.84375 0.625 0.84375 0.6875 0.90625 0.6875 0.90625 0.625 0.96875 0.625 0.96875 0.6875 0.03125 0.875 0.03125 0.8125 0.09375 0.8125 0.09375 0.875 0.15625 0.875 0.15625 0.8125 0.1875 0.8125 0.1875 0.875 0.25 0.875 0.25 0.8125 0.28125 0.8125 0.28125 0.875 0.34375 0.875 0.34375 0.8125 0.375 0.8125 0.375 0.875 0.4375 0.875 0.4375 0.8125 0.46875 0.8125 0.46875 0.875 0.53125 0.875 0.53125 0.8125 0.5625 0.8125 0.5625 0.875 0.625 0.875 0.625 0.8125 0.65625 0.8125 0.65625 0.875 0.65625 0.125 0.0625 0.4375 0.1875 0.6875 0.78125 0.125 0.84375 0.125 0.1875 0.1875 0.15625 0.1875 0.21875 0.125 0.1875 0.0625 0.15625 0.0625 0.125 0.125 0.34375 0.375 0.34375 0.4375 0.03125 0.1875 0.0625 0.1875 0.4375 0.625 0.4375 0.6875 0.5625 0.625 0.5625 0.6875 0.3125 0.625 0.15625 0.375 0.15625 0.4375 0.5 0.375 0.65625 0.4375 </float_array>
+          <technique_common>
+            <accessor source="xp-uv-array" stride="2" count="148">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="xp-vertex">
+          <input semantic="POSITION" source="#xp-position" />
+        </vertices>
+        <polylist material="mouche-material" count="86">
+          <input offset="0" semantic="VERTEX" source="#xp-vertex" />
+          <input offset="1" semantic="NORMAL" source="#xp-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#xp-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>3 1 23 0 1 20 6 1 124 6 1 124 2 1 22 3 1 23 2 1 22 6 1 124 1 1 21 5 1 93 6 1 95 4 1 92 5 1 93 1 1 94 6 1 95 8 1 65 10 1 67 7 1 64 8 1 65 9 1 66 10 1 67 12 1 101 14 1 103 11 1 100 12 1 101 13 1 102 14 1 103 16 1 105 18 1 107 15 1 104 16 1 105 17 1 106 18 1 107 22 0 39 19 0 36 20 0 37 20 0 37 23 0 125 22 0 39 23 0 125 20 0 37 21 0 38 21 0 57 25 0 59 23 0 56 21 0 57 24 0 58 25 0 59 40 0 126 26 0 68 27 0 69 27 0 69 29 0 71 40 0 126 29 0 71 27 0 69 28 0 70 31 0 117 17 0 119 30 0 116 31 0 117 32 0 118 17 0 119 11 0 121 35 0 123 33 0 120 11 0 121 34 0 122 35 0 123 33 2 27 3 2 24 2 2 25 2 2 25 11 2 127 33 2 27 11 2 127 2 2 25 12 2 26 19 2 31 18 2 28 17 2 128 17 2 128 20 2 30 19 2 31 20 2 30 17 2 128 32 2 29 9 2 61 0 2 63 10 2 60 9 2 61 6 2 62 0 2 63 23 2 89 26 2 91 22 2 88 23 2 89 27 2 90 26 2 91 13 2 109 30 2 111 14 2 108 13 2 109 31 2 110 30 2 111 34 2 113 15 2 115 35 2 112 34 2 113 16 2 114 15 2 115 41 3 130 36 3 4 25 3 134 25 3 134 38 3 129 41 3 130 38 3 129 25 3 134 24 3 5 24 3 5 37 3 7 38 3 129 37 3 7 24 3 5 44 3 133 44 3 133 4 3 131 37 3 7 4 3 131 44 3 133 43 3 132 43 3 132 5 3 6 4 3 131 4 3 97 7 3 99 37 3 96 4 3 97 8 3 98 7 3 99 28 3 85 36 3 87 29 3 84 28 3 85 25 3 86 36 3 87 0 4 136 3 4 44 33 4 45 33 4 45 35 4 135 0 4 136 37 4 47 0 4 136 35 4 135 35 4 135 38 4 46 37 4 47 10 4 12 0 4 13 7 4 15 0 4 13 37 4 14 7 4 15 41 4 3 39 4 0 42 4 137 42 4 137 40 4 1 41 4 3 36 4 138 41 4 3 40 4 1 40 4 1 29 4 2 36 4 138 11 4 140 14 4 76 30 4 77 30 4 77 17 4 139 11 4 140 34 4 79 11 4 140 17 4 139 17 4 139 16 4 78 34 4 79 15 4 142 18 4 80 19 4 81 19 4 81 22 4 141 15 4 142 39 4 83 15 4 142 22 4 141 22 4 141 42 4 82 39 4 83 38 4 75 35 4 72 15 4 73 15 4 73 39 4 143 38 4 75 41 4 74 38 4 75 39 4 143 22 4 32 26 4 33 42 4 35 26 4 33 40 4 34 42 4 35 32 5 145 31 5 40 13 5 41 13 5 41 12 5 144 32 5 145 44 5 43 32 5 145 12 5 144 12 5 144 43 5 42 44 5 43 43 5 51 12 5 48 2 5 49 2 5 49 1 5 146 43 5 51 5 5 50 43 5 51 1 5 146 21 5 147 20 5 52 32 5 53 32 5 53 44 5 54 21 5 147 24 5 55 21 5 147 44 5 54 6 5 16 9 5 17 4 5 19 9 5 17 8 5 18 4 5 19 27 5 8 23 5 9 28 5 11 23 5 9 25 5 10 28 5 11 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="mouche-scene" name="mouche-scene">
+      <node sid="xp" id="xp" name="xp">
+        <translate sid="translate">-7.50 6.50 175.50</translate>
+        <instance_geometry url="#xp-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mouche-material" target="#mouche-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene name="" sid="" url="#mouche-scene" />
+  </scene>
+</COLLADA>

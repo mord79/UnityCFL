@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <authoring_tool>Minddesk Qubicle 2</authoring_tool>
+      <comments>Get Qubicle at www.minddesk.com</comments>
+    </contributor>
+    <created>2015-04-164:15 PM16:15:33:968</created>
+    <modified>2015-04-164:15 PM16:15:33:968</modified>
+    <unit meter="1.0" />
+  </asset>
+  <library_images>
+    <image id="Cochon-image" name="Cochon-image">
+      <init_from>file:///Materials/Cochon.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Cochon-material" name="Cochon-material">
+      <instance_effect url="#Cochon-shader-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Cochon-shader-fx" name="Cochon-shader-fx">
+      <profile_COMMON>
+        <newparam sid="Cochon-image-surface">
+          <surface type="2D">
+            <init_from>Cochon-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Cochon-image-sampler">
+          <sampler2D>
+            <source>Cochon-image-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NEAREST</minfilter>
+            <magfilter>NEAREST</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <lambert>
+            <ambient>
+              <color sid="ambient">0.0 0.0 0.0 1.0</color>
+            </ambient>
+            <diffuse>
+              <texture texcoord="CHANNEL0" texture="Cochon-image-sampler" />
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry name="Cochon_Chest" id="Cochon_Chest-lib">
+      <mesh>
+        <source id="Cochon_Chest-position">
+          <float_array id="Cochon_Chest-position-array" count="24">14.5 6.5 -0.5 14.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 6.5 -0.5 -0.5 6.5 9.5 -0.5 -0.5 9.5 14.5 -0.5 9.5 14.5 6.5 9.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Chest-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Chest-normal">
+          <float_array id="Cochon_Chest-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon_Chest-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Chest-uv">
+          <float_array id="Cochon_Chest-uv-array" count="48">0.015625 0.171875 0.015625 0.015625 0.25 0.015625 0.25 0.171875 0.28125 0.171875 0.28125 0.015625 0.515625 0.015625 0.515625 0.171875 0.546875 0.125 0.546875 0.015625 0.78125 0.015625 0.78125 0.125 0.015625 0.3125 0.015625 0.203125 0.25 0.203125 0.25 0.3125 0.8125 0.125 0.8125 0.015625 0.96875 0.015625 0.96875 0.125 0.28125 0.3125 0.28125 0.203125 0.4375 0.203125 0.4375 0.3125 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Chest-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon_Chest-vertex">
+          <input semantic="POSITION" source="#Cochon_Chest-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Cochon_Chest-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon_Chest-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon_Chest-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 9 3 1 11 0 1 8 1 1 9 2 1 10 3 1 11 5 0 13 7 0 15 4 0 12 5 0 13 6 0 14 7 0 15 2 2 17 4 2 19 3 2 16 2 2 17 5 2 18 4 2 19 6 3 21 0 3 23 7 3 20 6 3 21 1 3 22 0 3 23 3 4 0 4 4 1 0 4 3 4 4 1 7 4 2 0 4 3 5 5 4 2 5 5 6 5 7 2 5 5 1 5 6 6 5 7 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Cochon_Jambe_2" id="Cochon_Jambe_2-lib">
+      <mesh>
+        <source id="Cochon_Jambe_2-position">
+          <float_array id="Cochon_Jambe_2-position-array" count="24">2.5 3.5 -0.5 2.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 3.5 -0.5 -0.5 3.5 1.5 -0.5 -0.5 1.5 2.5 -0.5 1.5 2.5 3.5 1.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_2-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_2-normal">
+          <float_array id="Cochon_Jambe_2-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_2-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_2-uv">
+          <float_array id="Cochon_Jambe_2-uv-array" count="48">0.40625 0.40625 0.40625 0.34375 0.453125 0.34375 0.453125 0.40625 0.484375 0.40625 0.484375 0.34375 0.53125 0.34375 0.53125 0.40625 0.765625 0.40625 0.765625 0.34375 0.796875 0.34375 0.796875 0.40625 0.828125 0.40625 0.828125 0.34375 0.859375 0.34375 0.859375 0.40625 0.40625 0.46875 0.40625 0.4375 0.453125 0.4375 0.453125 0.46875 0.015625 0.5625 0.015625 0.53125 0.0625 0.53125 0.0625 0.5625 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_2-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon_Jambe_2-vertex">
+          <input semantic="POSITION" source="#Cochon_Jambe_2-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Cochon_Jambe_2-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon_Jambe_2-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon_Jambe_2-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 5 3 1 7 0 1 4 1 1 5 2 1 6 3 1 7 5 0 1 7 0 3 4 0 0 5 0 1 6 0 2 7 0 3 2 2 13 4 2 15 3 2 12 2 2 13 5 2 14 4 2 15 6 3 9 0 3 11 7 3 8 6 3 9 1 3 10 0 3 11 3 4 16 4 4 17 0 4 19 4 4 17 7 4 18 0 4 19 5 5 20 2 5 21 6 5 23 2 5 21 1 5 22 6 5 23 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Cochon_Jambe_4" id="Cochon_Jambe_4-lib">
+      <mesh>
+        <source id="Cochon_Jambe_4-position">
+          <float_array id="Cochon_Jambe_4-position-array" count="24">2.5 3.5 -0.5 2.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 3.5 -0.5 -0.5 3.5 1.5 -0.5 -0.5 1.5 2.5 -0.5 1.5 2.5 3.5 1.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_4-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_4-normal">
+          <float_array id="Cochon_Jambe_4-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_4-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_4-uv">
+          <float_array id="Cochon_Jambe_4-uv-array" count="48">0.015625 0.40625 0.015625 0.34375 0.0625 0.34375 0.0625 0.40625 0.5625 0.40625 0.5625 0.34375 0.609375 0.34375 0.609375 0.40625 0.640625 0.40625 0.640625 0.34375 0.671875 0.34375 0.671875 0.40625 0.703125 0.40625 0.703125 0.34375 0.734375 0.34375 0.734375 0.40625 0.5625 0.46875 0.5625 0.4375 0.609375 0.4375 0.609375 0.46875 0.796875 0.46875 0.796875 0.4375 0.84375 0.4375 0.84375 0.46875 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_4-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon_Jambe_4-vertex">
+          <input semantic="POSITION" source="#Cochon_Jambe_4-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Cochon_Jambe_4-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon_Jambe_4-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon_Jambe_4-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 5 3 1 7 0 1 4 1 1 5 2 1 6 3 1 7 5 0 1 7 0 3 4 0 0 5 0 1 6 0 2 7 0 3 2 2 13 4 2 15 3 2 12 2 2 13 5 2 14 4 2 15 6 3 9 0 3 11 7 3 8 6 3 9 1 3 10 0 3 11 3 4 16 4 4 17 0 4 19 4 4 17 7 4 18 0 4 19 5 5 20 2 5 21 6 5 23 2 5 21 1 5 22 6 5 23 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Cochon_Jambe_1" id="Cochon_Jambe_1-lib">
+      <mesh>
+        <source id="Cochon_Jambe_1-position">
+          <float_array id="Cochon_Jambe_1-position-array" count="24">2.5 3.5 -0.5 2.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 3.5 -0.5 -0.5 3.5 1.5 -0.5 -0.5 1.5 2.5 -0.5 1.5 2.5 3.5 1.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_1-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_1-normal">
+          <float_array id="Cochon_Jambe_1-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_1-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_1-uv">
+          <float_array id="Cochon_Jambe_1-uv-array" count="48">0.171875 0.40625 0.171875 0.34375 0.21875 0.34375 0.21875 0.40625 0.25 0.40625 0.25 0.34375 0.296875 0.34375 0.296875 0.40625 0.890625 0.40625 0.890625 0.34375 0.921875 0.34375 0.921875 0.40625 0.078125 0.5 0.078125 0.4375 0.109375 0.4375 0.109375 0.5 0.640625 0.46875 0.640625 0.4375 0.6875 0.4375 0.6875 0.46875 0.71875 0.46875 0.71875 0.4375 0.765625 0.4375 0.765625 0.46875 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_1-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon_Jambe_1-vertex">
+          <input semantic="POSITION" source="#Cochon_Jambe_1-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Cochon_Jambe_1-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon_Jambe_1-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon_Jambe_1-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 5 3 1 7 0 1 4 1 1 5 2 1 6 3 1 7 5 0 1 7 0 3 4 0 0 5 0 1 6 0 2 7 0 3 2 2 9 4 2 11 3 2 8 2 2 9 5 2 10 4 2 11 6 3 13 0 3 15 7 3 12 6 3 13 1 3 14 0 3 15 3 4 20 4 4 21 0 4 23 4 4 21 7 4 22 0 4 23 5 5 16 2 5 17 6 5 19 2 5 17 1 5 18 6 5 19 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Cochon_Jambe_3" id="Cochon_Jambe_3-lib">
+      <mesh>
+        <source id="Cochon_Jambe_3-position">
+          <float_array id="Cochon_Jambe_3-position-array" count="24">2.5 3.5 -0.5 2.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 3.5 -0.5 -0.5 3.5 1.5 -0.5 -0.5 1.5 2.5 -0.5 1.5 2.5 3.5 1.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_3-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_3-normal">
+          <float_array id="Cochon_Jambe_3-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_3-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon_Jambe_3-uv">
+          <float_array id="Cochon_Jambe_3-uv-array" count="48">0.09375 0.40625 0.09375 0.34375 0.140625 0.34375 0.140625 0.40625 0.328125 0.40625 0.328125 0.34375 0.375 0.34375 0.375 0.40625 0.953125 0.40625 0.953125 0.34375 0.984375 0.34375 0.984375 0.40625 0.015625 0.5 0.015625 0.4375 0.046875 0.4375 0.046875 0.5 0.484375 0.46875 0.484375 0.4375 0.53125 0.4375 0.53125 0.46875 0.875 0.46875 0.875 0.4375 0.921875 0.4375 0.921875 0.46875 </float_array>
+          <technique_common>
+            <accessor source="Cochon_Jambe_3-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon_Jambe_3-vertex">
+          <input semantic="POSITION" source="#Cochon_Jambe_3-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Cochon_Jambe_3-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon_Jambe_3-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon_Jambe_3-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 5 3 1 7 0 1 4 1 1 5 2 1 6 3 1 7 5 0 1 7 0 3 4 0 0 5 0 1 6 0 2 7 0 3 2 2 13 4 2 15 3 2 12 2 2 13 5 2 14 4 2 15 6 3 9 0 3 11 7 3 8 6 3 9 1 3 10 0 3 11 3 4 20 4 4 21 0 4 23 4 4 21 7 4 22 0 4 23 5 5 16 2 5 17 6 5 19 2 5 17 1 5 18 6 5 19 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+    <geometry name="Cochon" id="Cochon-lib">
+      <mesh>
+        <source id="Cochon-position">
+          <float_array id="Cochon-position-array" count="60">4.5 5.5 -0.5 4.5 -0.5 -0.5 0.5 -0.5 -0.5 0.5 5.5 -0.5 0.5 2.5 0.5 0.5 0.5 0.5 -0.5 0.5 0.5 -0.5 2.5 0.5 0.5 5.5 5.5 0.5 -0.5 5.5 4.5 -0.5 5.5 4.5 5.5 5.5 -0.5 2.5 4.5 -0.5 0.5 4.5 0.5 0.5 4.5 0.5 2.5 4.5 0.5 2.5 -0.5 0.5 2.5 5.5 0.5 0.5 -0.5 0.5 0.5 5.5 </float_array>
+          <technique_common>
+            <accessor source="Cochon-position-array" stride="3" count="20">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon-normal">
+          <float_array id="Cochon-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Cochon-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cochon-uv">
+          <float_array id="Cochon-uv-array" count="128">0.46875 0.296875 0.46875 0.203125 0.5625 0.203125 0.5625 0.296875 0.59375 0.296875 0.59375 0.203125 0.65625 0.203125 0.65625 0.296875 0.6875 0.296875 0.6875 0.203125 0.75 0.203125 0.75 0.296875 0.78125 0.296875 0.78125 0.203125 0.84375 0.203125 0.84375 0.296875 0.875 0.296875 0.875 0.203125 0.9375 0.203125 0.9375 0.296875 0.96875 0.265625 0.96875 0.203125 0.984375 0.203125 0.984375 0.265625 0.140625 0.5 0.140625 0.4375 0.15625 0.4375 0.15625 0.5 0.1875 0.484375 0.1875 0.4375 0.28125 0.4375 0.28125 0.484375 0.3125 0.46875 0.3125 0.4375 0.375 0.4375 0.375 0.46875 0.953125 0.46875 0.953125 0.4375 0.96875 0.4375 0.96875 0.46875 0.09375 0.5625 0.09375 0.53125 0.109375 0.53125 0.109375 0.5625 0.140625 0.5625 0.140625 0.53125 0.15625 0.53125 0.15625 0.5625 0.1875 0.5625 0.1875 0.53125 0.203125 0.53125 0.203125 0.5625 0.546875 0.171875 0.546875 0.15625 0.640625 0.15625 0.640625 0.171875 0.65625 0.25 0.65625 0.21875 0.6875 0.25 0.6875 0.21875 0.203125 0.4375 0.265625 0.4375 0.5625 0.171875 0.625 0.171875 </float_array>
+          <technique_common>
+            <accessor source="Cochon-uv-array" stride="2" count="64">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cochon-vertex">
+          <input semantic="POSITION" source="#Cochon-position" />
+        </vertices>
+        <polylist material="Cochon-material" count="36">
+          <input offset="0" semantic="VERTEX" source="#Cochon-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Cochon-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Cochon-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>3 1 7 0 1 4 1 1 5 1 1 5 16 1 56 3 1 7 16 1 56 1 1 5 2 1 6 2 1 6 18 1 57 16 1 56 5 1 49 7 1 51 4 1 48 5 1 49 6 1 50 7 1 51 11 0 11 8 0 8 17 0 58 17 0 58 10 0 10 11 0 11 10 0 10 17 0 58 19 0 59 19 0 59 9 0 9 10 0 10 13 0 45 15 0 47 12 0 44 13 0 45 14 0 46 15 0 47 8 2 31 3 2 28 16 2 29 16 2 29 17 2 30 8 2 31 17 2 30 16 2 29 4 2 60 4 2 60 15 2 61 17 2 30 6 2 33 12 2 35 7 2 32 6 2 33 13 2 34 12 2 35 5 2 62 18 2 52 2 2 53 2 2 53 14 2 63 5 2 62 14 2 63 2 2 53 9 2 54 9 2 54 19 2 55 14 2 63 18 2 41 4 2 43 16 2 40 18 2 41 5 2 42 4 2 43 14 2 37 17 2 39 15 2 36 14 2 37 19 2 38 17 2 39 10 3 1 0 3 3 11 3 0 10 3 1 1 3 2 0 3 3 3 4 12 8 4 13 0 4 15 8 4 13 11 4 14 0 4 15 7 4 24 12 4 25 4 4 27 12 4 25 15 4 26 4 4 27 9 5 16 2 5 17 10 5 19 2 5 17 1 5 18 10 5 19 13 5 20 6 5 21 14 5 23 6 5 21 5 5 22 14 5 23 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Cochon-scene" name="Cochon-scene">
+      <node sid="Cochon_Chest" id="Cochon_Chest" name="Cochon_Chest">
+        <translate sid="translate">-6.50 5.50 48.50</translate>
+        <instance_geometry url="#Cochon_Chest-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Cochon_Jambe_2" id="Cochon_Jambe_2" name="Cochon_Jambe_2">
+        <translate sid="translate">-5.50 0.50 49.50</translate>
+        <instance_geometry url="#Cochon_Jambe_2-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Cochon_Jambe_4" id="Cochon_Jambe_4" name="Cochon_Jambe_4">
+        <translate sid="translate">4.50 0.50 49.50</translate>
+        <instance_geometry url="#Cochon_Jambe_4-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Cochon_Jambe_1" id="Cochon_Jambe_1" name="Cochon_Jambe_1">
+        <translate sid="translate">-5.50 0.50 55.50</translate>
+        <instance_geometry url="#Cochon_Jambe_1-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Cochon_Jambe_3" id="Cochon_Jambe_3" name="Cochon_Jambe_3">
+        <translate sid="translate">4.50 0.50 55.50</translate>
+        <instance_geometry url="#Cochon_Jambe_3-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node sid="Cochon" id="Cochon" name="Cochon">
+        <translate sid="translate">-13.50 6.50 50.50</translate>
+        <instance_geometry url="#Cochon-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Cochon-material" target="#Cochon-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene name="" sid="" url="#Cochon-scene" />
+  </scene>
+</COLLADA>
