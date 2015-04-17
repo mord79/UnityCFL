@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <authoring_tool>Minddesk Qubicle 2</authoring_tool>
+      <comments>Get Qubicle at www.minddesk.com</comments>
+    </contributor>
+    <created>2015-04-179:27 AM09:27:01:100</created>
+    <modified>2015-04-179:27 AM09:27:01:100</modified>
+    <unit meter="1.0" />
+  </asset>
+  <library_images>
+    <image id="tocheOff-image" name="tocheOff-image">
+      <init_from>file:///Materials/tocheOff.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="tocheOff-material" name="tocheOff-material">
+      <instance_effect url="#tocheOff-shader-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="tocheOff-shader-fx" name="tocheOff-shader-fx">
+      <profile_COMMON>
+        <newparam sid="tocheOff-image-surface">
+          <surface type="2D">
+            <init_from>tocheOff-image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="tocheOff-image-sampler">
+          <sampler2D>
+            <source>tocheOff-image-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NEAREST</minfilter>
+            <magfilter>NEAREST</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="standard">
+          <lambert>
+            <ambient>
+              <color sid="ambient">0.0 0.0 0.0 1.0</color>
+            </ambient>
+            <diffuse>
+              <texture texcoord="CHANNEL0" texture="tocheOff-image-sampler" />
+            </diffuse>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry name="Torch" id="Torch-lib">
+      <mesh>
+        <source id="Torch-position">
+          <float_array id="Torch-position-array" count="24">2.5 9.5 -0.5 2.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 9.5 -0.5 -0.5 9.5 2.5 -0.5 -0.5 2.5 2.5 -0.5 2.5 2.5 9.5 2.5 </float_array>
+          <technique_common>
+            <accessor source="Torch-position-array" stride="3" count="8">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Torch-normal">
+          <float_array id="Torch-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="Torch-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Torch-uv">
+          <float_array id="Torch-uv-array" count="48">0.03125 0.6875 0.03125 0.0625 0.125 0.0625 0.125 0.6875 0.1875 0.6875 0.1875 0.0625 0.28125 0.0625 0.28125 0.6875 0.34375 0.6875 0.34375 0.0625 0.4375 0.0625 0.4375 0.6875 0.5 0.6875 0.5 0.0625 0.59375 0.0625 0.59375 0.6875 0.65625 0.25 0.65625 0.0625 0.75 0.0625 0.75 0.25 0.8125 0.25 0.8125 0.0625 0.90625 0.0625 0.90625 0.25 </float_array>
+          <technique_common>
+            <accessor source="Torch-uv-array" stride="2" count="24">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Torch-vertex">
+          <input semantic="POSITION" source="#Torch-position" />
+        </vertices>
+        <polylist material="tocheOff-material" count="12">
+          <input offset="0" semantic="VERTEX" source="#Torch-vertex" />
+          <input offset="1" semantic="NORMAL" source="#Torch-normal" />
+          <input offset="2" semantic="TEXCOORD" source="#Torch-uv" />
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 1 9 3 1 11 0 1 8 1 1 9 2 1 10 3 1 11 5 0 5 7 0 7 4 0 4 5 0 5 6 0 6 7 0 7 2 2 1 4 2 3 3 2 0 2 2 1 5 2 2 4 2 3 6 3 13 0 3 15 7 3 12 6 3 13 1 3 14 0 3 15 3 4 20 4 4 21 0 4 23 4 4 21 7 4 22 0 4 23 5 5 16 2 5 17 6 5 19 2 5 17 1 5 18 6 5 19 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="tocheOff-scene" name="tocheOff-scene">
+      <node sid="Torch" id="Torch" name="Torch">
+        <translate sid="translate">0.50 0.50 47.50</translate>
+        <instance_geometry url="#Torch-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tocheOff-material" target="#tocheOff-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene name="" sid="" url="#tocheOff-scene" />
+  </scene>
+</COLLADA>
