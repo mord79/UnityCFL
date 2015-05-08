@@ -1,6 +1,8 @@
 ﻿#pragma strict
 var audioComponent : AudioSource;
 var soundList : AudioClip[];
+
+
 function Start () {
 
 audioComponent = gameObject.GetComponent(AudioSource);
@@ -19,5 +21,21 @@ function Update () {
 		audioComponent.Play();
 	
 	}
+	
+	
+	if(Input.GetMouseButtonDown(0)){
+		audioComponent.clip = soundList[2];
+		audioComponent.Play();
+	
+	
+	}
+
+}
+
+function PlayCollectible(){
+
+		audioComponent.clip = soundList[0];
+		audioComponent.Play();
+
 
 }

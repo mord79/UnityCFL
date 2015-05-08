@@ -1,7 +1,13 @@
 ﻿#pragma strict
 
-function OnBouttonClick(){
+static var score : int; 
+	
 
-	Application.LoadLevel(1);
+
+static function AddScore(scoreAdded : int){
+
+	score += scoreAdded;
+
 
 }
+

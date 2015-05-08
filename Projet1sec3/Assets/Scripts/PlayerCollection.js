@@ -1,16 +1,9 @@
 ﻿#pragma strict
 
-import UnityEngine.UI;
-
 //Changer pour le GameManagerScript qui doit etre static
 //var score : int;
-var textUi : UnityEngine.UI.Text;
-
-function Start () {
-
-textUi = GameObject.Find("ScoreText").GetComponent(Text);
-
-}
+var audioComponent: AudioSource;
+var audioList : AudioClip[];
 
 function Update () {
 
@@ -20,7 +13,6 @@ function Update () {
 		
 		}
 
-textUi.text = "SCORE: " + GamemanagerScript.score;
 
 }
 
@@ -28,6 +20,9 @@ function OnTriggerEnter(other: Collider){
 
 
 			if(other.gameObject.tag == "Collectible"){
+				audioComponent.clip = audioList[0];
+				audioComponent.Play();
+				
 				Destroy(other.gameObject);
 				GamemanagerScript.AddScore(50);
 				print("Score :" + GamemanagerScript.score);
