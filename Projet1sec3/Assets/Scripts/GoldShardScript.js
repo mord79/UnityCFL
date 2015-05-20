@@ -27,8 +27,8 @@ var audioPlayer : AudioManagerPlayer;
 				
 				
 				audioPlayer.PlayCollectible();
-				GamemanagerScript.AddScore(50);
-				print("Score :" + GamemanagerScript.score);
+				GameManagerScript.AddScore(50);
+				print("Score :" + GameManagerScript.score);
 				Destroy(gameObject);
 				
 				

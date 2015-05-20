@@ -70,7 +70,7 @@ function OnCollisionEnter(other : Collision){
 			if(hit.collider.tag == "Ennemi"){
 				Jump();
 				Destroy(other.gameObject);
-				GamemanagerScript.AddScore(200);
+				GameManagerScript.AddScore(200);
 			
 			// destroy le joueur	
 			} else if(hit.collider.tag != "Ennemi"){

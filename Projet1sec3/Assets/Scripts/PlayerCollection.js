@@ -9,7 +9,7 @@ function Update () {
 
 
 		if(Input.GetKeyDown(KeyCode.S)){
-			GamemanagerScript.AddScore(1);
+			GameManagerScript.AddScore(1);
 		
 		}
 
@@ -24,8 +24,8 @@ function OnTriggerEnter(other: Collider){
 				audioComponent.Play();
 				
 				Destroy(other.gameObject);
-				GamemanagerScript.AddScore(50);
-				print("Score :" + GamemanagerScript.score);
+				GameManagerScript.AddScore(50);
+				print("Score :" + GameManagerScript.score);
 				
 				
 				

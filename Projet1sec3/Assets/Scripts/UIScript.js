@@ -2,7 +2,8 @@
 import UnityEngine.UI;
 
 
-var textUi : UnityEngine.UI.Text;
+var scoreTextUi : UnityEngine.UI.Text;
+var healthTextUi : UnityEngine.UI.Text;
 
 // Ne pas détruire l'objet au début de la scène
 static var isCreated : boolean;
@@ -20,14 +21,15 @@ if(!isCreated){
 	
 	
 function Start () {
-
-	textUi = GameObject.Find("ScoreText").GetComponent(Text);
-
+	
+	scoreTextUi = GameObject.Find("ScoreText").GetComponent(Text);
+	healthTextUi = GameObject.Find("HealthText").GetComponent(Text);
 }
 
 function Update () {
 	
-	textUi.text = "SCORE: " + GamemanagerScript.score;
+	scoreTextUi.text = "SCORE: " + GameManagerScript.score;
+	healthTextUi.text = "HEALTH: " + GameManagerScript.health;
 
 }
 

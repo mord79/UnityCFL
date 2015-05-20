@@ -19,6 +19,7 @@ function Update () {
 	if(Input.GetKey(KeyCode.Alpha2)){
 		audioComponent.clip = soundList[1];
 		audioComponent.Play();
+		
 	
 	}
 	
@@ -35,6 +36,14 @@ function Update () {
 function PlayCollectible(){
 
 		audioComponent.clip = soundList[0];
+		audioComponent.Play();
+
+
+}
+
+function PlayAttack(){
+
+		audioComponent.clip = soundList[2];
 		audioComponent.Play();
 
 
