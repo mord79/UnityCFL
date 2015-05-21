@@ -5,7 +5,7 @@ var patrolNodeObject : GameObject[];
 var noOfNode : int;
 var currentNode : int;
 
-//Enum pour les type de States
+//Enum pour les types de States
 enum EnnemiState{Patrol, Search, Attack};
 // States
 var ennemiState: EnnemiState;
@@ -15,7 +15,7 @@ var player: GameObject;
 var attackDistance : float;
 //Distance minimum pour que l'ennemi retourne en Patrol
 var playerMinDistanceForPatrol: float;
-//Composante de navigation du joueur
+//Composante de navigation de l'ennemi
 var ennemiNav : NavMeshAgent;
 
 
