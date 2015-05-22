@@ -31,22 +31,10 @@ ennemiNav = GetComponentInParent(NavMeshAgent);
 }
 
 function Update () {
-// orienter le détecteur vers le joueur
 
-transform.LookAt(player.transform);
 
-// vérifier si le joueur est à l'extérieur de la zone de détection 
-	var hit: RaycastHit;
-	if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),hit)){
-		if(hit.transform.tag == "Player"){
-			if(hit.distance > playerMinDistanceForPatrol){
-				
-				Debug.DrawLine (transform.position, player.transform.position,Color.green);
-				ennemiState = EnnemiState.Patrol;
-			}
-		}
-	
-	}
+//Appler la fonction Patrol() à toutes les frames
+	Patrol();
 
 // Fonctionnement du comportement de l'ennemi
  switch (ennemiState){
@@ -54,8 +42,8 @@ transform.LookAt(player.transform);
 		case ennemiState.Patrol:
 			if(currentNode == 0){
 				
-				currentNode = Random.Range(1,noOfNode+1.1);
-				ennemiNav.SetDestination(patrolNodeObject[currentNode-1].transform.position);
+				currentNode = Random.Range(0,noOfNode);
+				ennemiNav.SetDestination(patrolNodeObject[currentNode].transform.position);
 				ennemiNav.Resume();
 			}
 			if(ennemiNav.remainingDistance < 1){
@@ -93,7 +81,7 @@ function OnTriggerStay (other : Collider) {
 		var hit : RaycastHit;
 		
 		if(other.gameObject.tag == "Player"){	
-		// si le joueur est devant l'ennemi et assez proche
+		// si le joueur est devant l'ennemi est assez proche
 			if (Physics.Raycast(transform.position, transform.parent.TransformDirection(Vector3.forward), hit, attackDistance)){
 				Debug.DrawLine (transform.position, other.transform.position,Color.red);
 				ennemiState = EnnemiState.Attack;
@@ -105,10 +93,24 @@ function OnTriggerStay (other : Collider) {
 				}
 		}
 		
-	
-			
-			
-			
+}
+
+function Patrol(){
+
+// orienter le détecteur vers le joueur
+	transform.LookAt(player.transform);
+
+// vérifier si le joueur est à l'extérieur de la zone de détection 
+	var hit: RaycastHit;
+	if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),hit)){
+		if(hit.transform.tag == "Player"){
+			if(hit.distance > playerMinDistanceForPatrol){
+				
+				Debug.DrawLine (transform.position, player.transform.position,Color.green);
+				ennemiState = EnnemiState.Patrol;
+			}
+		}
+	}
 }
 
 
