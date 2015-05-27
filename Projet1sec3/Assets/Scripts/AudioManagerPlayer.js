@@ -43,7 +43,7 @@ function PlayCollectible(){
 
 function PlayAttack(){
 
-		audioComponent.clip = soundList[2];
+		audioComponent.clip = soundList[3];
 		audioComponent.Play();
 
 

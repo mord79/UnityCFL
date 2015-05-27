@@ -19,9 +19,24 @@ var playerMinDistanceForPatrol: float;
 var ennemiNav : NavMeshAgent;
 
 
+// permet de définir les propriétés de combats
+var attackSpeed : int;
+var canAttack : boolean;
+var hitPoint : int;
 
+// pour créer des effets visuels 
+var rendererComponent : Renderer;
+var flashAttackColor : Color;
+var flashHurtColor : Color;
+var normalColor : Color;
 
 function Start () {
+// initialisation pour pouvoir attaquer
+canAttack = true;
+rendererComponent = GetComponentInParent(Renderer);
+normalColor = rendererComponent.material.color;
+
+
 noOfNode = patrolNodeObject.Length;
 // initialiser les GO du joueur
 player = GameObject.Find("Player");
@@ -59,22 +74,24 @@ function Update () {
 			break;
 		case ennemiState.Attack:
 			ennemiNav.Stop();
-			var audioPlayer = player.GetComponentInChildren(AudioManagerPlayer);
 			
-				if(!audioPlayer.audioComponent.isPlaying){
-					audioPlayer.PlayAttack();
-					GameManagerScript.SubstractHealth(10);
-				}
-				
+			
+			if(canAttack){
+				Attack();
+			}
+								
 			break;
 		
 
 			}
 
-//debug currentNode		
-if(Input.GetKeyDown(KeyCode.C)){
-currentNode = Mathf.Floor(Random.Range(0,noOfNode));
-}
+// mort de l'ennemi
+	if(hitPoint <= 0){
+	
+		Death();
+		
+	}
+
 }
 
 function OnTriggerStay (other : Collider) {
@@ -82,13 +99,13 @@ function OnTriggerStay (other : Collider) {
 		
 		if(other.gameObject.tag == "Player"){	
 		// si le joueur est devant l'ennemi est assez proche
-			if (Physics.Raycast(transform.position, transform.parent.TransformDirection(Vector3.forward), hit, attackDistance)){
-				Debug.DrawLine (transform.position, other.transform.position,Color.red);
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), hit, attackDistance)){
+				//Debug.DrawLine (transform.position, other.transform.position,Color.red);
 				ennemiState = EnnemiState.Attack;
 			}
 		// si l'ennemi est détecté
 			else if (Physics.Linecast(transform.position, other.transform.position)){
-				Debug.DrawLine (transform.position, other.transform.position,Color.yellow);
+				//Debug.DrawLine (transform.position, other.transform.position,Color.yellow);
 				ennemiState = EnnemiState.Search;
 				}
 		}
@@ -106,13 +123,52 @@ function Patrol(){
 		if(hit.transform.tag == "Player"){
 			if(hit.distance > playerMinDistanceForPatrol){
 				
-				Debug.DrawLine (transform.position, player.transform.position,Color.green);
+				//Debug.DrawLine (transform.position, player.transform.position,Color.green);
 				ennemiState = EnnemiState.Patrol;
 			}
 		}
 	}
 }
 
+function Attack(){
+	var audioPlayer = player.GetComponentInChildren(AudioManagerPlayer);
+	
+		
+		canAttack = false;
+		rendererComponent.material.color = flashAttackColor;
+		audioPlayer.PlayAttack();
+		GameManagerScript.SubstractHealth(10);
+		yield WaitForSeconds(0.10);
+		rendererComponent.material.color = normalColor;
+		yield WaitForSeconds(attackSpeed);
+		canAttack = true;
+
+
+
+}
+
+function LoosHitPoint(hp : int){
+
+	hitPoint -= hp;
+	rendererComponent.material.color = flashHurtColor;
+	yield WaitForSeconds(0.10);
+	rendererComponent.material.color = normalColor;
+	
+
+}
+
+function Death(){
+
+	var audioComponent : AudioSource;
+	audioComponent = gameObject.GetComponent(AudioSource);
+	if (!audioComponent.isPlaying){
+		audioComponent.Play();
+		yield WaitForSeconds(audioComponent.clip.length);
+		Destroy (transform.parent.gameObject);
+	}
+	
+
+}
 
 
 
