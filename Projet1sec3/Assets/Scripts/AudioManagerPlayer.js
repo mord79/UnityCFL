@@ -24,13 +24,6 @@ function Update () {
 	}
 	
 	
-	if(Input.GetMouseButtonDown(0)){
-		audioComponent.clip = soundList[2];
-		audioComponent.Play();
-	
-	
-	}
-
 }
 
 function PlayCollectible(){
@@ -43,8 +36,23 @@ function PlayCollectible(){
 
 function PlayAttack(){
 
-		audioComponent.clip = soundList[3];
+		audioComponent.clip = soundList[2];
 		audioComponent.Play();
 
+
+}
+
+function PlayAttackLaser(){
+
+		audioComponent.clip = soundList[4];
+		audioComponent.Play();
+
+
+}
+
+function PlaySwing(){
+
+		audioComponent.clip = soundList[1];
+		audioComponent.Play();
 
 }
