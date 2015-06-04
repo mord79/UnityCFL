@@ -138,7 +138,7 @@ function Attack(){
 		rendererComponent.material.color = flashAttackColor;
 		audioPlayer.PlayAttack();
 		GameManagerScript.SubstractHealth(10);
-		yield WaitForSeconds(0.10);
+		yield WaitForSeconds(0.1);
 		rendererComponent.material.color = normalColor;
 		yield WaitForSeconds(attackSpeed);
 		canAttack = true;
