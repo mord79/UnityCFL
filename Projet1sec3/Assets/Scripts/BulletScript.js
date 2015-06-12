@@ -23,7 +23,7 @@ function OnTriggerEnter(other : Collider){
 	
 	
 			var ennemi : EnnemiPF = other.gameObject.GetComponentInChildren(EnnemiPF);
-			ennemi.LoosHitPoint(attackStrenght);
+			ennemi.LooseHitPoint(attackStrenght);
 			DestroyBullet();
 	
 	}else if(other.gameObject.tag == "Level"){

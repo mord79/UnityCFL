@@ -147,11 +147,11 @@ function Attack(){
 
 }
 
-function LoosHitPoint(hp : int){
+function LooseHitPoint(hp : int){
 
 	hitPoint -= hp;
 	rendererComponent.material.color = flashHurtColor;
-	yield WaitForSeconds(0.10);
+	yield WaitForSeconds(0.1);
 	rendererComponent.material.color = normalColor;
 	
 

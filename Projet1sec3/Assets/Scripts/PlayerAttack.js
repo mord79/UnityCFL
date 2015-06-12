@@ -36,7 +36,7 @@ function Update () {
 			
 				var ennemi : EnnemiPF = hit.transform.GetComponentInChildren(EnnemiPF);
 				audioComponent.PlayAttack();
-				ennemi.LoosHitPoint(attackStrenght);
+				ennemi.LooseHitPoint(attackStrenght);
 			}
 	}
 	else {
