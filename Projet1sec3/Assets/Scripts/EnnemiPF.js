@@ -85,7 +85,7 @@ function Update () {
 
 			}
 
-// mort de l'ennemi
+// mort de l'ennemi dans l'update:
 	if(hitPoint <= 0){
 	
 		Death();
